@@ -9,7 +9,7 @@ sub copy_commit_delete{
 		system("touch test.txt");
 		system("git add test.txt");
 		system("git commit -m Cheesed...");
-		system("git push")
+		system("git push");
 		system("git rm text.txt");
 		system("rm test.txt");
 	}
