@@ -2,8 +2,6 @@
 
 #Function Body
 
-($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime();
-
 sub copy_commit_delete{
 	for($index = 0; $index < 1 + int rand(4); $index++){
 		system("touch test.txt");
@@ -14,6 +12,11 @@ sub copy_commit_delete{
 		system("rm test.txt");
 	}
 }
-#Main Body
 
-copy_commit_delete();
+#Main Body
+while(True){
+	sleep(int(rand(43200))+43200);
+	for($index = 0; $index < int(rand(4))+1; $index++){
+		copy_commit_delete();
+	}
+}
