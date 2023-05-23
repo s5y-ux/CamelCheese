@@ -3,13 +3,12 @@
 #Function Body
 
 sub copy_commit_delete{
+    $foo .= sprintf("%x", rand 64) for 1..8;
 	for($index = 0; $index < 1 + int rand(4); $index++){
-		system("touch test.txt");
-		system("git add test.txt");
+		system("touch $foo.txt");
+		system("git add $foo.txt");
 		system("git commit -m Cheesed...");
 		system("git push");
-		system("git rm text.txt");
-		system("rm test.txt");
 	}
 }
 
