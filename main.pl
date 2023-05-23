@@ -15,8 +15,8 @@ sub copy_commit_delete{
 
 #Main Body
 while(True){
-	sleep(int(rand(43200))+43200);
 	for($index = 0; $index < int(rand(4))+1; $index++){
 		copy_commit_delete();
 	}
+	sleep(int(rand(43200))+43200);
 }
